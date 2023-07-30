@@ -1,5 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+/**/
+/*@config "../tailwind.demo.config.js"*/
 
-@config "../tailwind.demo.config.js"
+body {
+    background: #1e2734;
+    color: #aaa;
+}
