@@ -25,7 +25,6 @@
                         :per-page="perPage"
                         :current="current"
                         :formatter="formatter"
-                        rounded
                         @change="handlePageChange">
                 <template #first>left</template>
             </Pagination>

@@ -38,10 +38,6 @@
     watch(selectedPage, (page) => {
         emit("change", page)
     })
-
-    const handleOnChange = (event) => {
-        console.log("handleOnChange", event.currentTarget.value)
-    }
 </script>
 
 <template>
@@ -82,17 +78,6 @@
             </PaginationLink>
 
             <template v-if="showDots('LEFT')">
-                <PaginationLink key="pg-page-1"
-                                class="pg-hidden md:pg-inline-block pg-border-r"
-                                :disabled="isInFirstPage"
-                                :active="isInFirstPage"
-                                :rounded="rounded"
-                                @click.prevent="gotoFirstPage">
-                    <slot name="number" :page-number="1">
-                        {{ formatter(1) }}
-                    </slot>
-                </PaginationLink>
-
                 <PaginationLink key="pg-divider-left"
                                 :rounded="rounded"
                                 class="pg__dots--left pg-hidden md:pg-inline-block pg-border-r">
@@ -133,17 +118,6 @@
                                 class="pg__dots--right pg-border-r pg-hidden md:pg-inline-block">
                     <slot name="dots">
                         ...
-                    </slot>
-                </PaginationLink>
-
-                <PaginationLink :key="`pg-page-${totalPages}`"
-                                class="pg-border-r pg-hidden md:pg-inline-block"
-                                :disabled="isInLastPage"
-                                :active="isInLastPage"
-                                :rounded="rounded"
-                                @click.prevent="gotoLastPage">
-                    <slot name="number" :page-number="totalPages">
-                        {{ formatter(totalPages) }}
                     </slot>
                 </PaginationLink>
             </template>

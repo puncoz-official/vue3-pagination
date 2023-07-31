@@ -12,17 +12,16 @@ const usePagination = (props: PaginationPropsRequired) => {
     const isInLastPage = computed(() => props.current === totalPages.value)
 
     const startPage = computed(() => {
-        if (props.current === 1) {
-            return 1
-        }
+        const start = props.current - Math.floor(props.maxButtons / 2)
 
-        if (props.current === totalPages.value) {
-            return totalPages.value - (props.maxButtons) + 1
-        }
-
-        return props.current - 1
+        return Math.min(Math.max(start, 1), totalPages.value - props.maxButtons + 1)
     })
-    const endPage = computed(() => Math.min(startPage.value + props.maxButtons - 1, totalPages.value))
+
+    const endPage = computed(() => {
+        const end = Math.max(props.current + Math.floor(props.maxButtons / 2), props.maxButtons)
+
+        return Math.min(end, totalPages.value)
+    })
 
     const pages = computed(() => {
         const range = []
@@ -38,10 +37,10 @@ const usePagination = (props: PaginationPropsRequired) => {
 
     const showDots = (position: DotsPosition): boolean => {
         if (position === "LEFT") {
-            return startPage.value > 1
+            return !pages.value.includes(1)
         }
 
-        return endPage.value < totalPages.value
+        return !pages.value.includes(totalPages.value)
     }
 
     const gotoPageNumber = (page: number) => {
