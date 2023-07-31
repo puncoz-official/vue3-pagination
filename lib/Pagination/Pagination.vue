@@ -23,7 +23,7 @@
         linkClass: "",
         activeLinkClass: "",
         disabledLinkClass: "",
-        linkTypeClass: null,
+        linkTypeClass: undefined,
     })
 
     const {

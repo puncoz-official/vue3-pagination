@@ -1,4 +1,5 @@
 <script setup lang="ts">
+    import { HTMLSelectEvent } from "#lib/Events"
     import { computed, ref, watchEffect } from "vue"
 
     const props = defineProps({
@@ -26,7 +27,7 @@
         return p
     })
 
-    const handleOnChange = (event) => {
+    const handleOnChange = (event: HTMLSelectEvent) => {
         emit("input", parseInt(event.currentTarget.value))
     }
 
