@@ -38,6 +38,21 @@
                         :formatter="formatter"
                         dark-mode
                         rounded
+                        wrapper-class="WRAPPER"
+                        info-class="INFO"
+                        info-highlight-class="INFO-HIGHLIGHT"
+                        nav-class="NAV"
+                        link-class="LINK"
+                        active-link-class="ACTIVE-LINK"
+                        disabled-link-class="DISABLED-LINK"
+                        :link-type-class="{
+                            first: 'FIRST',
+                            last: 'LAST',
+                            previous: 'PREVIOUS',
+                            next: 'NEXT',
+                            divider: 'DIVIDER',
+                            select: 'SELECT',
+                        }"
                         @change="handlePageChange">
                 <template #first>left</template>
             </Pagination>
