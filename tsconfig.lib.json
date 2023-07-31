@@ -1,14 +1,9 @@
 {
     "extends": "./tsconfig.json",
-    "include": [
-        "env.d.ts",
-        "lib/Pagination/**/*.ts",
-        "lib/Pagination/**/*.d.ts",
-        "lib/Pagination/**/*.vue",
-    ],
+    "include": ["env.d.ts", "lib/Pagination/**/*.ts", "lib/Pagination/**/*.d.ts", "lib/Pagination/**/*.vue"],
     "compilerOptions": {
         "noEmit": true,
         "outDir": "dist",
-        "declarationDir": "dist",
+        "declarationDir": "dist"
     }
 }

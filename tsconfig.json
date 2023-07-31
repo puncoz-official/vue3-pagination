@@ -27,14 +27,6 @@
             "#lib/*": ["lib/Pagination/@types/*"]
         }
     },
-    "include": [
-        "env.d.ts",
-        "demo/**/*.ts",
-        "demo/**/*.d.ts",
-        "demo/**/*.vue",
-        "lib/Pagination/**/*.ts",
-        "lib/Pagination/**/*.d.ts",
-        "lib/Pagination/**/*.vue",
-    ],
+    "include": ["env.d.ts", "demo/**/*.ts", "demo/**/*.d.ts", "demo/**/*.vue", "lib/Pagination/**/*.ts", "lib/Pagination/**/*.d.ts", "lib/Pagination/**/*.vue"],
     "exclude": ["node_modules"]
 }

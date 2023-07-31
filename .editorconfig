@@ -13,3 +13,6 @@ indent_size = 4
 # Do trim trailing whitespaces and remove UTF-8 byte order mark
 trim_trailing_whitespace = true
 charset = utf-8
+
+[package.json]
+indent_size = 2

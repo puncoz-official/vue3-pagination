@@ -33,20 +33,13 @@
   },
   "license": "MIT",
   "scripts": {
-    "clean": "rimraf dist build npm-debug.log* yarn-error.log*",
+    "clean": "rimraf dist build npm-debug.log*, yarn-error.log*",
     "clean:modules": "rimraf node_modules",
     "demo:dev": "vite --config vite.demo.config.ts",
-    "predist": "yarn clean && yarn lint",
-    "dist": "vue-tsc --noEmit && vite build --config vite.package.config.ts",
-    "build": "vue-tsc --noEmit && vite build --config vite.demo.config.ts",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build --remote jobins -b demo",
-    "serve": "vite preview",
-    "lint": "yarn lint:prettier && yarn lint:ts && yarn lint:style",
-    "lint:ts": "eslint --ext .ts,vue --ignore-path .gitignore .",
-    "lint:style": "stylelint .",
+    "predist": "yarn clean",
+    "lint": "yarn lint:prettier",
     "lint:prettier": "prettier -w -u .",
-    "release": "npx bumpp --tag --commit --push && npm publish"
+    "lint:ts": "eslint --ext .ts,vue --ignore-path .gitignore ."
   },
   "peerDependencies": {
     "vue": "^3.2.0"
@@ -69,6 +62,7 @@
     "eslint-plugin-vue": "^9.15.1",
     "postcss": "^8.4.26",
     "prettier": "^3.0.0",
+    "rimraf": "^5.0.1",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6",
     "vite": "^4.4.4",
