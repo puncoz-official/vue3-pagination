@@ -39,6 +39,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         type: import("vue").PropType<boolean>;
         default: boolean;
     };
+    hideFirstLast: {
+        type: import("vue").PropType<boolean>;
+        default: boolean;
+    };
     formatter: {
         type: import("vue").PropType<(pageNumber: number) => string | number>;
         default: (n: number) => number;
@@ -104,6 +108,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         type: import("vue").PropType<boolean>;
         default: boolean;
     };
+    hideFirstLast: {
+        type: import("vue").PropType<boolean>;
+        default: boolean;
+    };
     formatter: {
         type: import("vue").PropType<(pageNumber: number) => string | number>;
         default: (n: number) => number;
@@ -139,6 +147,7 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     wrapperClass: string;
     maxButtons: number;
     hideInfo: boolean;
+    hideFirstLast: boolean;
     formatter: (pageNumber: number) => string | number;
     infoHighlightClass: string;
     linkClass: string;

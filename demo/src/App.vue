@@ -1,6 +1,7 @@
 <script setup lang="ts">
-    import { Pagination } from "@puncoz/vue3-pagination"
     import { ref } from "vue"
+    // import { Pagination } from "@puncoz/vue3-pagination"
+    import { Pagination } from "../../"
 
     const total = ref(102)
     const perPage = ref(10)
@@ -25,6 +26,7 @@
                         :per-page="perPage"
                         :current="current"
                         :formatter="formatter"
+                        hide-first-last
                         @change="handlePageChange">
                 <template #first>left</template>
             </Pagination>

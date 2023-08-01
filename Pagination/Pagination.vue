@@ -12,6 +12,7 @@
         current: 1,
         maxButtons: 5,
         hideInfo: false,
+        hideFirstLast: false,
         darkMode: false,
         rounded: false,
         formatter: (n: number) => n,
@@ -81,7 +82,8 @@
         </PaginationInfo>
 
         <PaginationNav :rounded="rounded" :nav-class="navClass">
-            <PaginationLink key="pg-first"
+            <PaginationLink v-if="!hideFirstLast"
+                            key="pg-first"
                             :class="linkClasses.type.first || 'pg__link--first  pg-border-r'"
                             :classes="linkClasses"
                             :disabled="isInFirstPage"
@@ -166,7 +168,8 @@
                 </slot>
             </PaginationLink>
 
-            <PaginationLink key="pg-last"
+            <PaginationLink v-if="!hideFirstLast"
+                            key="pg-last"
                             :class="linkClasses.type.last || 'pg__link--last'"
                             :classes="linkClasses"
                             :disabled="isInLastPage"

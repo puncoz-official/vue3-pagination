@@ -4,6 +4,7 @@ export interface PaginationProps {
     current?: number;
     maxButtons?: number;
     hideInfo?: boolean;
+    hideFirstLast?: boolean;
     darkMode?: boolean;
     rounded?: boolean;
     formatter?: (pageNumber: number) => string | number;

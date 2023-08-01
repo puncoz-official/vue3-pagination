@@ -5,6 +5,7 @@ export interface PaginationProps {
     maxButtons?: number
 
     hideInfo?: boolean
+    hideFirstLast?: boolean
     darkMode?: boolean
     rounded?: boolean
 

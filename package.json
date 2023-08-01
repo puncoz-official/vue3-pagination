@@ -45,6 +45,7 @@
     "lint:type-check": "vue-tsc --noEmit -p ./tsconfig.json",
     "predist": "yarn clean && yarn lint",
     "lib:types": "vue-tsc -p ./tsconfig.json --declaration --emitDeclarationOnly",
+    "lib:dev": "vite --config vite.config.ts",
     "lib:build": "vite build --config vite.config.ts",
     "dist": "yarn lib:build"
   },
