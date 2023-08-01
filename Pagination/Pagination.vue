@@ -1,11 +1,11 @@
 <script setup lang="ts">
-    import { LinkClasses, PaginationProps, PaginationPropsRequired } from "#lib/Props"
-    import PageSelect from "@lib/Components/PageSelect.vue"
-    import PaginationInfo from "@lib/Components/PaginationInfo.vue"
-    import PaginationLink from "@lib/Components/PaginationLink.vue"
-    import PaginationNav from "@lib/Components/PaginationNav.vue"
-    import PaginationWrapper from "@lib/Components/PaginationWrapper.vue"
-    import usePagination from "@lib/Composables/usePagination"
+    import { LinkClasses, PaginationProps, PaginationPropsRequired } from "#/Props"
+    import PageSelect from "@/Components/PageSelect.vue"
+    import PaginationInfo from "@/Components/PaginationInfo.vue"
+    import PaginationLink from "@/Components/PaginationLink.vue"
+    import PaginationNav from "@/Components/PaginationNav.vue"
+    import PaginationWrapper from "@/Components/PaginationWrapper.vue"
+    import usePagination from "@/Composables/usePagination"
     import { computed, watch } from "vue"
 
     const props = withDefaults(defineProps<PaginationProps>(), {

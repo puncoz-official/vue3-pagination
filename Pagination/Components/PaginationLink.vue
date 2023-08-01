@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { LinkClasses } from "#lib/Props"
+    import { LinkClasses } from "#/Props"
     import { computed, PropType } from "vue"
 
     const props = defineProps({

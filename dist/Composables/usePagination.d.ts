@@ -1,9 +1,8 @@
-import { DotsPosition, PaginationPropsRequired } from "#lib/Props";
 declare const usePagination: (props: PaginationPropsRequired) => {
     selectedPage: import("vue").Ref<number>;
     totalPages: import("vue").ComputedRef<number>;
     currentStart: import("vue").ComputedRef<number>;
-    currentEnd: import("vue").ComputedRef<number>;
+    currentEnd: import("vue").ComputedRef<any>;
     isInFirstPage: import("vue").ComputedRef<boolean>;
     isInLastPage: import("vue").ComputedRef<boolean>;
     gotoPageNumber: (page: number) => void;

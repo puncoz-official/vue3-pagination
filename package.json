@@ -1,5 +1,5 @@
 {
-  "name": "vue3-pagination",
+  "name": "@puncoz/vue3-pagination",
   "version": "1.0.0",
   "description": "Basic pagination component for Vue3.",
   "keywords": [
@@ -13,36 +13,40 @@
   },
   "repository": "https://github.com/puncoz-official/vue3-pagination.git",
   "homepage": "https://vue3-pagination.netlify.app/",
-  "type":  "commonjs",
+  "type": "module",
   "files": [
     "dist"
   ],
   "main": "./dist/vue3-pagination.umd.js",
   "module": "./dist/vue3-pagination.es.js",
   "style": "./dist/style.css",
-  "types": "./dist/types/index.d.ts",
+  "typings": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue3-pagination.es.js",
-      "require": "./dist/vue3-pagination.umd.js"
+      "require": "./dist/vue3-pagination.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": {
+      "default": "./dist/style.css"
     }
   },
-  "source": "lib/Pagination/index.ts",
+  "source": "Pagination/index.ts",
   "engines": {
     "node": ">=16",
     "npm": ">=6.10"
   },
   "license": "MIT",
   "scripts": {
-    "clean": "rimraf dist build npm-debug.log*, yarn-error.log*",
+    "clean": "rimraf dist yarn-debug.log*, yarn-error.log*",
     "clean:modules": "rimraf node_modules",
-    "demo:dev": "vite --config vite.demo.config.ts",
-    "lint": "yarn lint:prettier && yarn lint:ts",
+    "lint": "yarn lint:prettier && yarn lint:eslint",
     "lint:prettier": "prettier -w -u .",
-    "lint:ts": "eslint --ext .ts,vue --ignore-path .gitignore .",
+    "lint:eslint": "eslint --ext .ts,vue --ignore-path .gitignore .",
+    "lint:type-check": "vue-tsc --noEmit -p tsconfig.json --composite false",
     "predist": "yarn clean && yarn lint",
-    "lib:types": "vue-tsc -p ./tsconfig.lib.json --declaration --emitDeclarationOnly",
-    "lib:build": "vite build --config vite.lib.config.ts",
+    "lib:types": "vue-tsc -p ./tsconfig.json --declaration --emitDeclarationOnly",
+    "lib:build": "vite build --config vite.config.ts",
     "dist": "yarn lib:build && yarn lib:types"
   },
   "peerDependencies": {
@@ -71,6 +75,7 @@
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6",
     "vite": "^4.4.4",
+    "vite-plugin-dts": "^3.4.0",
     "vue-tsc": "^1.8.5"
   },
   "husky": {

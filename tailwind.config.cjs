@@ -4,7 +4,7 @@ module.exports = {
     darkMode: ["class", "[data-theme=\"dark\"]"],
     important: ".pg__pagination",
     content: [
-        "./lib/Pagination/**/*.{vue,ts}",
+        "./Pagination/**/*.{vue,ts}",
     ],
     theme: {
         extend: {

@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "ESNext",
         "module": "ESNext",
-        "moduleResolution": "Node",
+        "moduleResolution": "nodenext",
         "strict": true,
         "forceConsistentCasingInFileNames": true,
         "allowSyntheticDefaultImports": true,
@@ -20,13 +20,15 @@
         "skipLibCheck": false,
         "lib": ["esnext", "dom"],
         "types": ["vite/client"],
+        "noEmit": false,
+        "outDir": "dist",
+        "declaration": true,
+        "declarationDir": "dist",
         "paths": {
-            "@demo/*": ["demo/*"],
-            "#demo/*": ["demo/@types/*"],
-            "@lib/*": ["lib/Pagination/*"],
-            "#lib/*": ["lib/Pagination/@types/*"]
+            "@/*": ["Pagination/*"],
+            "#/*": ["Pagination/@types/*"]
         }
     },
-    "include": ["env.d.ts", "demo/**/*.ts", "demo/**/*.d.ts", "demo/**/*.vue", "lib/Pagination/**/*.ts", "lib/Pagination/**/*.d.ts", "lib/Pagination/**/*.vue"],
+    "include": ["env.d.ts", "Pagination/**/*.ts", "Pagination/**/*.d.ts", "Pagination/**/*.vue"],
     "exclude": ["node_modules"]
 }

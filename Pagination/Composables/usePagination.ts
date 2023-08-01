@@ -1,4 +1,4 @@
-import { DotsPosition, PaginationPropsRequired } from "#lib/Props"
+import { DotsPosition, PaginationPropsRequired } from "#/Props"
 import { computed, ref } from "vue"
 
 

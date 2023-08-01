@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { Pagination } from "@lib/"
+    import { Pagination } from "@puncoz/vue3-pagination"
     import { ref } from "vue"
 
     const total = ref(102)
@@ -59,3 +59,5 @@
         </div>
     </div>
 </template>
+
+<style src="@puncoz/vue3-pagination/dist/style.css"/>

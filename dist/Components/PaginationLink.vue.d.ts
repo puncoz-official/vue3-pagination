@@ -1,4 +1,3 @@
-import { LinkClasses } from "#lib/Props";
 import { PropType } from "vue";
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     active: {
@@ -43,9 +42,9 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
         default: () => {};
     };
 }>>, {
-    active: boolean;
-    disabled: boolean;
     rounded: boolean;
+    disabled: boolean;
+    active: boolean;
     classes: LinkClasses;
 }, {}>, {
     default?(_: {}): any;
