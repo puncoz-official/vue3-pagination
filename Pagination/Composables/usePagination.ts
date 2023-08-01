@@ -1,6 +1,5 @@
-import { DotsPosition, PaginationPropsRequired } from "#/Props"
+import { DotsPosition, PaginationPropsRequired } from "#/index"
 import { computed, ref } from "vue"
-
 
 const usePagination = (props: PaginationPropsRequired) => {
     const selectedPage = ref<number>(props.current)

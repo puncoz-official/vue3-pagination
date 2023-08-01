@@ -1,3 +1,4 @@
+import { LinkClasses } from '../@types/index';
 import { PropType } from "vue";
 declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     active: {

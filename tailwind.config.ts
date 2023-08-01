@@ -1,5 +1,6 @@
-/** @type {import("tailwindcss").Config} */
-module.exports = {
+import { Config } from "tailwindcss"
+
+export default {
     prefix: "pg-",
     darkMode: ["class", "[data-theme=\"dark\"]"],
     important: ".pg__pagination",
@@ -16,5 +17,5 @@ module.exports = {
     corePlugins: {
         preflight: false,
     },
-}
+} satisfies Config
 

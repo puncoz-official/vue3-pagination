@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { LinkClasses, PaginationProps, PaginationPropsRequired } from "#/Props"
+    import { LinkClasses, PaginationProps, PaginationPropsRequired } from "#/index"
     import PageSelect from "@/Components/PageSelect.vue"
     import PaginationInfo from "@/Components/PaginationInfo.vue"
     import PaginationLink from "@/Components/PaginationLink.vue"

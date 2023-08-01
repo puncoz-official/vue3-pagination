@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { HTMLSelectEvent } from "#/Events"
+    import { HTMLSelectEvent } from "#/index"
     import { computed, ref, watchEffect } from "vue"
 
     const props = defineProps({

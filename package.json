@@ -13,7 +13,6 @@
   },
   "repository": "https://github.com/puncoz-official/vue3-pagination.git",
   "homepage": "https://vue3-pagination.netlify.app/",
-  "type": "module",
   "files": [
     "dist"
   ],
@@ -40,14 +39,14 @@
   "scripts": {
     "clean": "rimraf dist yarn-debug.log*, yarn-error.log*",
     "clean:modules": "rimraf node_modules",
-    "lint": "yarn lint:prettier && yarn lint:eslint",
+    "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:type-check",
     "lint:prettier": "prettier -w -u .",
     "lint:eslint": "eslint --ext .ts,vue --ignore-path .gitignore .",
-    "lint:type-check": "vue-tsc --noEmit -p tsconfig.json --composite false",
+    "lint:type-check": "vue-tsc --noEmit -p ./tsconfig.json",
     "predist": "yarn clean && yarn lint",
     "lib:types": "vue-tsc -p ./tsconfig.json --declaration --emitDeclarationOnly",
     "lib:build": "vite build --config vite.config.ts",
-    "dist": "yarn lib:build && yarn lib:types"
+    "dist": "yarn lib:build"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
